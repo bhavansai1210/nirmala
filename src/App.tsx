@@ -18,6 +18,7 @@ import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { InquiryModal } from './components/InquiryModal';
 import { MobileStickyBar } from './components/MobileStickyBar';
+import { BrandPreloader } from './components/BrandPreloader';
 import { easeCurve } from './styles/animations';
 
 // Dedicated views
@@ -83,6 +84,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#F7F3EC] text-[#191816] flex flex-col font-sans pb-16 md:pb-0">
+      {/* Editorial Initial Brand Entrance Overlay */}
+      <BrandPreloader />
+
       {/* Global Navigation */}
       <Navbar
         currentView={currentView}
