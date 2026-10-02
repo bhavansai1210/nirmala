@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --color-ivory: #F7F3EC;
+  --color-warm-white: #FCFAF6;
+  --color-charcoal: #191816;
+  --color-deep-brown: #30261F;
+  --color-gold: #B89B5E;
+  --color-gold-light: #D4BE8D;
+  --color-gold-dark: #91753C;
+  --color-soft-beige: #E8DED0;
+  --color-beige-border: #E2D7C7;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    background-color: #F7F3EC;
+    color: #191816;
+  }
+
+  h1, h2, h3, .font-serif, .font-display {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom subtle gold drawing line animation */
+@keyframes drawLine {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.animate-draw-line {
+  animation: drawLine 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Subtle image zoom hover */
+.img-zoom-hover {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.group:hover .img-zoom-hover {
+  transform: scale(1.04);
+}
